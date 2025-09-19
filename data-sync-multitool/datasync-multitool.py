@@ -15,7 +15,6 @@ import psutil
 import shutil
 import queue
 
-# Auto-install helper
 def check_module(module, pip_name=None):
     try:
         __import__(module)
@@ -26,7 +25,6 @@ def check_module(module, pip_name=None):
         subprocess.check_call([sys.executable, "-m", "pip", "install", pip_name])
         return True
 
-# Ensure visual libs
 check_module("pyfiglet")
 check_module("rich")
 from rich.console import Console
@@ -38,7 +36,6 @@ import pyfiglet
 
 console = Console()
 
-# Helpers d'affichage
 def big_title(text):
     fig = pyfiglet.figlet_format(text, font="slant")
     console.print(f"[magenta]{fig}[/magenta]")
@@ -66,7 +63,6 @@ def loader():
             time.sleep(0.03)
     console.print("\n")
 
-# --- Fonctions réseau / utilitaires (inchangées, affichage amélioré) ---
 def port_scanner():
     clear()
     section_title("PORT SCANNER")
@@ -229,7 +225,6 @@ def password_generator():
     console.print(Panel(Text(pw, style="bold magenta"), title="[magenta]Mot de passe généré[/magenta]"))
     pause()
 
-# --- Nouvelle option: brute-force multithreaded complet ---
 def full_brute_force():
     clear()
     section_title("Full Brute Force Password Tester (Local & Legal)")
@@ -281,7 +276,6 @@ def hash_generator():
     console.print(Panel(f"MD5: {md5}\nSHA256: {sha256}", title="[magenta]Résultats[/magenta]"))
     pause()
 
-# --- Menus mis à jour ---
 def password_tools_menu():
     while True:
         clear()
@@ -297,10 +291,6 @@ def password_tools_menu():
         elif choice == "4":
             break
 
-# --- Le reste du script reste inchangé ---
-# system_tools_menu, web_tools_menu, fun_tools_menu, main_menu etc.
-
-# --- MAIN MENU ---
 def main_menu():
     while True:
         clear()
