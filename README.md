@@ -15,3 +15,4 @@ T’amuser avec des outils fun comme des générateurs ASCII et des blagues alé
 
 Disclaimer :
 Cet outil est destiné uniquement à des fins éducatives et légales. L’utilisation sur des systèmes ou réseaux sans autorisation est strictement interdite et peut entraîner des conséquences légales. L’auteur décline toute responsabilité en cas d’utilisation abusive.
+<img width="1580" height="767" alt="image" src="https://github.com/user-attachments/assets/fe817ca3-e4b4-437a-9fd3-a688e787ac8c" />
